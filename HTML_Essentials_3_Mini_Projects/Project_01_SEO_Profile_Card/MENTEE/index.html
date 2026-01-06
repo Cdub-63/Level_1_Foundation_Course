@@ -28,12 +28,18 @@
       5) <meta name="keywords" content="..."> (comma-separated keywords)
       6) <meta name="author" content="...">
     -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Profile Card</title>
+    <meta name="description" content="A personal profile landing page showcasing skills and contact information.">
+    <meta name="keywords" content="profile, SEO, personal landing page, skills, contact form">
+    <meta name="author" content="Christian Wallace">
     <!-- STEP 2 — Link your CSS file (optional but recommended) -->
     <!--
       Add: <link rel="stylesheet" href="styles.css">
       Even if the focus is HTML, a tiny bit of CSS helps you *see* your structure.
     -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <!-- STEP 3 — Create a semantic page layout -->
@@ -44,7 +50,7 @@
       - <footer> for the bottom section
       Tip: Wrap everything in a <div class="page"> if you want a single container.
     -->
-
+    <div class="page">
     <!-- STEP 4 — Header content (Headings + span) -->
     <!--
       Inside <header>, add:
@@ -53,7 +59,10 @@
       - Inside that <p>, wrap ONE important word in a <span class="small">...</span> OR <span>...</span>
         (Example idea: "Front-End" or "Mentor")
     -->
-
+    <header>
+      <h1>Christian Wallace</h1>
+      <p>Passionate <span class="small">Front-End</span> Developer and Mentor.</p>
+    </header>
     <!-- STEP 5 — Main content with 2 sections (Divs + Lists) -->
     <!--
       Inside <main>, create a <div class="grid-2"> to hold two cards side-by-side (on desktop).
@@ -65,7 +74,24 @@
       - A <ul> list of at least 5 skills
       - A <p class="small"> note under the list
     -->
-
+    <main>
+      <div class="grid-2">
+        <section class="card">
+          <h2>About</h2>
+          <p>Hello! I'm Christian Wallace, a dedicated front-end developer with a passion for creating engaging and user-friendly web experiences. With years of experience in HTML, CSS, and JavaScript, I strive to build websites that are not only visually appealing but also highly functional.</p>
+          <p>When I'm not coding, I enjoy mentoring aspiring developers and sharing my knowledge with the community.</p>
+        </section>
+        <section class="card">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Web Design</li>
+            <li>SEO Best Practices</li>
+            <li>Version Control (Git)</li>
+          </ul>
+          <p class="small">Note: Continuously learning and updating my skills to stay current with industry trends.</p>
+        </section>
     <!-- STEP 6 — Add a small table (Tables) -->
     <!--
       Below the cards, add another <section class="card"> with:
@@ -73,7 +99,35 @@
       - A <table> with a <thead> and <tbody>
       - Include 3 rows in <tbody> (example: Day / Topic / Goal)
     -->
-
+        <section class="card">
+        <h2>Weekly Focus</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Topic</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML & CSS</td>
+              <td>Build a responsive layout</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>JavaScript</td>
+              <td>Create interactive features</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>SEO Optimization</td>
+              <td>Improve website ranking</td>
+            </tr>
+          </tbody>
+        </table>
+        </section>
     <!-- STEP 7 — Add a contact form (Forms) -->
     <!--
       Add another <section class="card"> with:
@@ -86,14 +140,36 @@
         5) Submit button
       Important: each input MUST have a matching <label> with for/id.
     -->
-
+        <section class="card">
+        <h3>Contact</h3>
+        <form>
+          <label for="name">Name:</label><input type="text" id="name" name="name">
+          <label for="email">Email:</label><input type="email" id="email" name="email">
+          <label for="reason">Reason:</label>
+          <select id="reason" name="reason">
+            <option value="">Select a reason</option>
+            <option value="job">Job Inquiry</option>
+            <option value="mentorship">Mentorship Request</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="message">Message:</label><textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+        </section>
+    </main>
     <!-- STEP 8 — Footer (Structure) -->
     <!--
       Inside <footer>, add:
       - A <p> with copyright text
       - An <ol> with 3 quick links you *would* add (just placeholders)
     -->
-
+    <footer><p>&copy; 2024 Christian Wallace. All rights reserved.</p>
+      <ol>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ol>
+    </footer>
     <!-- STEP LAST — Validate your HTML -->
     <!--
       Quick self-check:
@@ -104,5 +180,7 @@
       ✅ Did you use BOTH a list and a table somewhere?
       ✅ Did you use a <span> to style a *small* piece of text inside a bigger element?
     -->
+  <!-- yes -->
+    </div>
   </body>
 </html>

@@ -28,12 +28,18 @@
       5) <meta name="keywords" content="..."> (comma-separated keywords)
       6) <meta name="author" content="...">
     -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Signup</title>
+    <meta name="description" content="Sign up for our community event and stay informed about the schedule and highlights.">
+    <meta name="keywords" content="community event, signup, schedule, highlights, local event">
+    <meta name="author" content="Christian Wallace">
     <!-- STEP 2 — Link your CSS file (optional but recommended) -->
     <!--
       Add: <link rel="stylesheet" href="styles.css">
       Even if the focus is HTML, a tiny bit of CSS helps you *see* your structure.
     -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <!-- STEP 3 — Create a semantic page layout -->
@@ -44,7 +50,8 @@
       - <footer> for the bottom section
       Tip: Wrap everything in a <div class="page"> if you want a single container.
     -->
-
+    <div class="page">
+      <header>
     <!-- STEP 4 — Header (Event title + details) -->
     <!--
       In <header>, add:
@@ -52,7 +59,10 @@
       - A <p> with date + location
       - Use a <span> inside the paragraph to highlight the city or date
     -->
-
+        <h1>Community Event Signup</h1>
+        <p>Join us on <span>July 15, 2024</span> at <span>Central Park, NYC</span></p>
+      </header>
+      <main>
     <!-- STEP 5 — Main section A (Event highlights list) -->
     <!--
       Add a <section class="card"> with:
@@ -60,7 +70,17 @@
       - A <ul> list of 5 highlights
       - A <p class="small"> note explaining why lists are useful
     -->
-
+        <section class="card">
+          <h2>Event Highlights</h2>
+          <ul>
+            <li>Live Music Performances</li>
+            <li>Food Trucks and Local Cuisine</li>
+            <li>Artisan Craft Stalls</li>
+            <li>Interactive Workshops</li>
+            <li>Family-Friendly Activities</li>
+          </ul>
+          <p class="small">Lists help organize information clearly for easy reading.</p>
+        </section>
     <!-- STEP 6 — Main section B (Schedule table) -->
     <!--
       Add another <section class="card"> with:
@@ -68,7 +88,40 @@
       - A <table> with columns: Time / Activity / Notes
       - Include 4 rows in the schedule
     -->
-
+        <section class="card">
+          <h2>Schedule</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10:00 AM</td>
+                <td>Opening Ceremony</td>
+                <td>Main Stage</td>
+              </tr>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Live Music</td>
+                <td>Band A Performance</td>
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>Workshops</td>
+                <td>Art & Craft Tent</td>
+              </tr>
+              <tr>
+                <td>3:00 PM</td>
+                <td>Food Tasting</td>
+                <td>Food Truck Area</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
     <!-- STEP 7 — Main section C (Signup form) -->
     <!--
       Add another <section class="card"> with:
@@ -82,7 +135,40 @@
         6) Message (textarea)
         7) Submit button
     -->
+        <section class="card">
+          <h3>Signup</h3>
+          <form>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="ticket-type">Ticket Type:</label>
+            <select id="ticket-type" name="ticket-type">
+              <option value="general">General Admission</option>
+              <option value="vip">VIP</option>
+              <option value="student">Student</option>
+            </select>
+
+            <fieldset>
+              <legend>Dietary Preference:</legend>
+              <label><input type="radio" name="dietary" value="none" checked> None</label>
+              <label><input type="radio" name="dietary" value="vegetarian"> Vegetarian</label>
+              <label><input type="radio" name="dietary" value="vegan"> Vegan</label>
+              <label><input type="radio" name="dietary" value="gluten-free"> Gluten-Free</label>
+            </fieldset>
+
+            <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+      <footer>
     <!-- STEP 8 — Footer (Mini SEO checklist) -->
     <!--
       In <footer>, add an <ol> checklist with 3 SEO reminders:
@@ -90,7 +176,12 @@
       - Meta description exists
       - Headings are in order
     -->
-
+        <ol>
+          <li>Title is clear</li>
+          <li>Meta description exists</li>
+          <li>Headings are in order</li>
+        </ol>
+      </div>
     <!-- STEP LAST — Validate your HTML -->
     <!--
       Quick self-check:
@@ -101,5 +192,6 @@
       ✅ Did you use BOTH a list and a table somewhere?
       ✅ Did you use a <span> to style a *small* piece of text inside a bigger element?
     -->
+    <!-- yes -->
   </body>
 </html>
