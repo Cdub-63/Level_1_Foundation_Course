@@ -23,7 +23,12 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let answer1 = parseFloat(prompt("What is 2 + 2?"));
+let answer2 = prompt("What keyword makes a variable you can change?");
+let answer3 = confirm("JavaScript runs in the browser (OK for true, Cancel for false)?");
+console.log(answer1);
+console.log(answer2);
+console.log(answer3);
 // STEP 2 — Create the correct answers
 /*
   Create correct1, correct2, correct3
@@ -34,7 +39,9 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+correct1 = 4;
+correct2 = "let";
+correct3 = true;
 // STEP 3 — Compare using === and !==
 /*
   Create booleans:
@@ -47,7 +54,18 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let isQ1Correct = answer1 === correct1;
+let isQ2Correct = answer2 === correct2;
+let isQ3Correct = answer3 === correct3;
+let isQ1Wrong = answer1 !== correct1;
+let isQ2Wrong = answer2 !== correct2;
+let isQ3Wrong = answer3 !== correct3;
+console.log(isQ1Correct);
+console.log(isQ2Correct);
+console.log(isQ3Correct);
+console.log(isQ1Wrong);
+console.log(isQ2Wrong);
+console.log(isQ3Wrong);
 // STEP 4 — Use > and < comparisons (requested)
 /*
   Create a number called score (start at 0).
@@ -60,7 +78,17 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let score = 0;
+if (isQ1Correct) {
+  score += 1;
+}
+if (isQ2Correct) {
+  score += 1;
+}
+if (isQ3Correct) {
+  score += 1;
+}
+console.log(score);
 // STEP 5 — Use logical operators && and ||
 /*
   Create:
@@ -71,7 +99,10 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let passedAll = isQ1Correct && isQ2Correct && isQ3Correct;
+let passedAtLeastOne = isQ1Correct || isQ2Correct || isQ3Correct;
+console.log(passedAll);
+console.log(passedAtLeastOne);
 // STEP 6 — Final debugging message with if/else
 /*
   Use if/else to print one final message:
@@ -82,3 +113,10 @@
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
+if (passedAll) {
+  console.log("Perfect score!");
+} else if (passedAtLeastOne) {
+  console.log("Some correct answers");
+} else {
+  console.log("Try again");
+}
