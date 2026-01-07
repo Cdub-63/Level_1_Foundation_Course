@@ -26,15 +26,19 @@
       4) <meta name="description" content="..."> (1 sentence about the page)
       (Optional) 5) <meta name="author" content="Your Name">
     -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Blog Post + Media + Embed</title>
+    <meta name="description" content="A semantic blog post page with articles, media, and an iframe embed.">
+    <meta name="author" content="Christian Wallace">
     <!-- STEP 2 — Link the CSS file -->
     <!--
       Add this line in <head>:
       <link rel="stylesheet" href="styles.css">
       This CSS is just a helper so you can SEE your sections.
     -->
+    <link rel="stylesheet" href="styles.css">
   </head>
-
   <body>
     <!-- STEP 3 — Create the outer page container -->
     <!--
@@ -43,6 +47,7 @@
       Example structure (do NOT copy literally; you must write it):
       <div class="page"> ... </div>
     -->
+    <div class="page">
 
     <!-- STEP 4 — Add the main semantic layout tags -->
     <!--
@@ -65,12 +70,16 @@
       - OPTIONAL but recommended: a skip link at the very top:
         <a class="skip" href="#content">Skip to content</a>
     -->
-
+    <header>
+      <h1>My Semantic Blog Post</h1>
+      <p class="small">Exploring Semantic HTML with Media and Embeds</p>
+      <a class="skip" href="#content">Skip to content</a>
+    </header>
     <!-- STEP 6 — Navigation with internal anchor links -->
     <!--
       Inside <nav>, create a list of links using:
       <ul> and <li> tags.
-
+    
       You MUST include at least 4 links that jump to sections on the page:
       - One link to the main content area: href="#content"
       - One link to your media section: href="#media"
@@ -80,7 +89,14 @@
       IMPORTANT RULE:
       The href like "#media" ONLY works if a section later has id="media".
     -->
-
+    <nav>
+      <ul>
+        <li><a href="#content">Main Content</a></li>
+        <li><a href="#media">Media Section</a></li>
+        <li><a href="#embed">Embed Section</a></li>
+        <li><a href="#extras">Extras Section</a></li>
+      </ul>
+    </nav>
     <!-- STEP 7 — Main content + section IDs -->
     <!--
       Give <main> an id="content" so the "Skip to content" link works.
@@ -94,6 +110,8 @@
       B) <section id="embed"> ... </section>
       C) <section id="extras"> ... </section>
     -->
+    <main id="content">
+
     <!-- STEP 8 — Blog article (use <article>) -->
     <!--
       Inside <section id="extras"> create ONE main <article class="card"> that includes:
@@ -102,7 +120,16 @@
       - A <ul> or <ol> list with 3 items (key takeaways)
       - A link (<a>) to a related resource (external link with target + rel)
     -->
-
+      <section id="extras">
+        <h2>Extras Section</h2>
+         <p>Here is some extra content for the extras section.</p>
+         <ol>
+           <li>Key Takeaway 1</li>
+           <li>Key Takeaway 2</li>
+           <li>Key Takeaway 3</li>
+         </ol>
+         <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Related Resource</a>
+      </section>
     <!-- STEP 9 — Media section (image + audio + video) -->
     <!--
       Inside <section id="media"> add:
@@ -111,27 +138,53 @@
       - <video controls> with a <source>
       Remember: audio/video file paths can be placeholders.
     -->
-
+      <section id="media">
+        <h2>Media Section</h2>
+        <figure>
+          <img src="path/to/image.jpg" alt="Descriptive alt text for the image">
+          <figcaption>This is a caption describing the image.</figcaption>
+        </figure>
+        <audio controls>
+          <source src="path/to/audio.mp3" type="audio/mpeg">
+        </audio>
+        <video controls>
+          <source src="path/to/video.mp4" type="video/mp4">
+        </video>
+      </section>
     <!-- STEP 10 — Embed section (iframe) -->
     <!--
       Inside <section id="embed"> add an iframe.
       Example idea: embed a YouTube video related to the blog topic.
       iframe MUST have title="...".
     -->
-
+      <section id="embed">
+        <h2>Embed Section</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </section>
     <!-- STEP 11 — Aside -->
     <!--
       Use <aside> for a short 'Author bio' or 'Related posts' section.
       Include a small list of 2 related links.
     -->
-
+      <aside>
+        <h2>Author Bio</h2>
+        <p>This blog post was written by Christian Wallace, a web development enthusiast.</p>
+        <h3>Related Posts</h3>
+        <ul>
+          <li><a href="#content">Understanding Semantic HTML</a></li>
+          <li><a href="#media">Adding Media to Your Web Pages</a></li>
+        </ul>
+      </aside>
     <!-- STEP 12 — Footer -->
     <!--
       Footer includes:
       - date published
       - copyright line
     -->
-
+      <footer>
+        <p>Published on June 10, 2024</p>
+        <p>&copy; 2024 Christian Wallace</p>
+      </footer>
     <!-- STEP LAST — Checklist before you finish -->
     <!--
       ✅ Semantic tags used: header/nav/main/section/article/aside/footer
@@ -142,5 +195,8 @@
       ✅ iframe is embedded (YouTube or Maps) + has a title attribute
       ✅ Link text is descriptive (not 'click here')
     -->
+      <!-- YES -->
+     </main>
+    </div>
   </body>
 </html>

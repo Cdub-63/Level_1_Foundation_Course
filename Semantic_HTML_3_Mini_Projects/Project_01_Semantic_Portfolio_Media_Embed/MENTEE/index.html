@@ -26,13 +26,18 @@
       4) <meta name="description" content="..."> (1 sentence about the page)
       (Optional) 5) <meta name="author" content="Your Name">
     -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Portfolio + Media + Embed</title>
+    <meta name="description" content="A simple portfolio landing page using semantic HTML, media, and an embedded iframe.">
+    <meta name="author" content="Christian Wallace">
     <!-- STEP 2 — Link the CSS file -->
     <!--
       Add this line in <head>:
       <link rel="stylesheet" href="styles.css">
       This CSS is just a helper so you can SEE your sections.
     -->
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -43,7 +48,7 @@
       Example structure (do NOT copy literally; you must write it):
       <div class="page"> ... </div>
     -->
-
+    <div class="page">
     <!-- STEP 4 — Add the main semantic layout tags -->
     <!--
       Inside .page, add these tags in this order:
@@ -65,7 +70,11 @@
       - OPTIONAL but recommended: a skip link at the very top:
         <a class="skip" href="#content">Skip to content</a>
     -->
-
+    <header>
+      <h1>My Semantic Portfolio</h1>
+      <p class="small">A showcase of semantic HTML, media, and embeds</p>
+      <a class="skip" href="#content">Skip to content</a>
+    </header>
     <!-- STEP 6 — Navigation with internal anchor links -->
     <!--
       Inside <nav>, create a list of links using:
@@ -80,7 +89,14 @@
       IMPORTANT RULE:
       The href like "#media" ONLY works if a section later has id="media".
     -->
-
+    <nav>
+      <ul>
+        <li><a href="#content">Main Content</a></li>
+        <li><a href="#media">Media Section</a></li>
+        <li><a href="#embed">Embed Section</a></li>
+        <li><a href="#extras">Extras Section</a></li>
+      </ul>
+    </nav>
     <!-- STEP 7 — Main content + section IDs -->
     <!--
       Give <main> an id="content" so the "Skip to content" link works.
@@ -94,6 +110,17 @@
       B) <section id="embed"> ... </section>
       C) <section id="extras"> ... </section>
     -->
+    <main id="content">
+      <section id="media">
+        <h2>Media Section</h2>
+        <!-- Media content will go here -->
+      </section>
+      <section id="embed">
+        <h2>Embed Section</h2>
+        <!-- Embed content will go here -->
+      </section>
+
+
     <!-- STEP 8 — Portfolio sections using <section> + <article> -->
     <!--
       Inside <section id="extras"> create a 'Projects' area.
@@ -103,7 +130,13 @@
       - <p> 1–2 sentence description
       - <a> link (external OR internal) with descriptive text
     -->
-
+      <section id="extras">
+        <h2>Extras Section</h2>
+        <article class="card">
+          <h3>Project One: Semantic Blog</h3>
+          <p>A blog layout using semantic HTML5 elements for better structure and accessibility.</p>
+          <a href="https://example.com/semantic-blog" target="_blank" rel="noopener">View Project</a>
+      </section>
     <!-- STEP 9 — Media section (image + audio + video) -->
     <!--
       Inside <section id="media"> you MUST add:
@@ -124,7 +157,17 @@
       NOTE:
       The audio/video file paths can be placeholders if you don’t have files yet.
     -->
-
+        <figure class="card">
+          <img src="assets/sample-image.jpg" alt="Sample Image">
+          <figcaption>Figure 1: A sample image for the portfolio.</figcaption>
+        </figure>
+        <audio controls>
+          <source src="assets/sample-audio.mp3" type="audio/mpeg">
+        </audio>
+        <video controls>
+          <source src="assets/sample-video.mp4" type="video/mp4">
+        </video>
+      </section>
     <!-- STEP 10 — Embed section (iframe) -->
     <!--
       Inside <section id="embed"> add an iframe embed.
@@ -136,7 +179,10 @@
       - Your iframe MUST have a title attribute for accessibility.
       - Example: <iframe title="Map to campus" src="..."></iframe>
     -->
-
+    <section id="embed">
+      <iframe title="Sample YouTube Video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </section>
+    </main>
     <!-- STEP 11 — Aside content -->
     <!--
       Inside <aside>, add:
@@ -144,7 +190,15 @@
       - A <ul> with 3 tips about semantic HTML
       - One external link to MDN (descriptive text!)
     -->
-
+    <aside>
+      <h2>Quick Tips</h2>
+      <ul>
+        <li>Use semantic tags to improve accessibility.</li>
+        <li>Choose tags based on content meaning, not just appearance.</li>
+        <li>Always provide alt text for images.</li>
+      </ul>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener">Learn more about HTML elements on MDN</a>
+    </aside>
     <!-- STEP 12 — Footer content -->
     <!--
       Inside <footer>, add:
@@ -152,7 +206,10 @@
       - One external link that opens in a new tab:
         target="_blank" and rel="noopener"
     -->
-
+    <footer>
+      <p class="small">© 2024 My Semantic Portfolio. All rights reserved.</p>
+      <a href="https://www.example.com" target="_blank" rel="noopener">Visit my website</a>
+    </footer>
     <!-- STEP LAST — Checklist before you finish -->
     <!--
       ✅ Semantic tags used: header/nav/main/section/article/aside/footer
@@ -163,5 +220,7 @@
       ✅ iframe is embedded (YouTube or Maps) + has a title attribute
       ✅ Link text is descriptive (not 'click here')
     -->
+    <!-- yes -->
+    </div>
   </body>
 </html>

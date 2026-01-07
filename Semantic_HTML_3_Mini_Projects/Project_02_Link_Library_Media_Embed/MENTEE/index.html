@@ -26,13 +26,18 @@
       4) <meta name="description" content="..."> (1 sentence about the page)
       (Optional) 5) <meta name="author" content="Your Name">
     -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Library + Media + Embed Project</title>
+    <meta name="description" content="A semantic HTML page demonstrating links, media, and embedding.">
+    <meta name="author" content="Christian Wallace">
     <!-- STEP 2 — Link the CSS file -->
     <!--
       Add this line in <head>:
       <link rel="stylesheet" href="styles.css">
       This CSS is just a helper so you can SEE your sections.
     -->
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -43,7 +48,8 @@
       Example structure (do NOT copy literally; you must write it):
       <div class="page"> ... </div>
     -->
-
+    <div class="page">
+      
     <!-- STEP 4 — Add the main semantic layout tags -->
     <!--
       Inside .page, add these tags in this order:
@@ -65,7 +71,11 @@
       - OPTIONAL but recommended: a skip link at the very top:
         <a class="skip" href="#content">Skip to content</a>
     -->
-
+    <header>
+      <h1>Link Library + Media + Embed Project</h1>
+      <p class="small">A semantic HTML page demonstrating links, media, and embedding.</p>
+      <a class="skip" href="#content">Skip to content</a>
+    </header>
     <!-- STEP 6 — Navigation with internal anchor links -->
     <!--
       Inside <nav>, create a list of links using:
@@ -80,7 +90,14 @@
       IMPORTANT RULE:
       The href like "#media" ONLY works if a section later has id="media".
     -->
-
+    <nav>
+      <ul>
+        <li><a href="#content">Main Content</a></li>
+        <li><a href="#media">Media Section</a></li>
+        <li><a href="#embed">Embed Section</a></li>
+        <li><a href="#extras">Extras Section</a></li>
+      </ul>
+    </nav>
     <!-- STEP 7 — Main content + section IDs -->
     <!--
       Give <main> an id="content" so the "Skip to content" link works.
@@ -94,6 +111,36 @@
       B) <section id="embed"> ... </section>
       C) <section id="extras"> ... </section>
     -->
+    <main id="content">
+      <h2>Welcome to the Link Library + Media + Embed Project</h2>
+      <p>This page demonstrates the use of semantic HTML tags, anchor links, media elements, and embedding content using iframes.</p>
+      <section id="media">
+        <h2>Media Section</h2>
+          <figure>
+            <img src="placeholder-image.jpg" alt="A descriptive text about the image">
+            <figcaption>Figure 1: A placeholder image demonstrating the use of figure and figcaption.</figcaption>
+          </figure>
+          <audio controls>
+            <source src="placeholder-audio.mp3" type="audio/mpeg">
+          </audio>
+          <video controls>
+            <source src="placeholder-video.mp4" type="video/mp4">
+          </video>
+      </section>
+      <section id="embed">
+        <h2>Embed Section</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube tutorial video" frameborder="0" allowfullscreen></iframe>
+      </section>
+      <section id="extras">
+        <h2>Extras Section</h2>
+          <ul>Favorite Resources</ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML Reference</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools HTML Tutorial</a></li>
+            <li><a href="https://html.com/" target="_blank" rel="noopener">HTML.com Tutorials</a></li>
+            <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">freeCodeCamp Responsive Web Design</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-html" target="_blank" rel="noopener">Codecademy Learn HTML</a></li>
+      </section>
+    </main>
     <!-- STEP 8 — Favorites list + external links -->
     <!--
       Inside <section id="extras"> create a 'Favorite Resources' list.
@@ -119,7 +166,7 @@
       - Google Maps iframe for a fake 'office location'
       Make sure iframe includes title="...".
     -->
-
+    
     <!-- STEP 11 — Create 2–3 resource cards using <article> -->
     <!--
       Still inside <main>, create 2–3 <article class="card"> blocks.
@@ -128,13 +175,39 @@
       - <p> description
       - One link (<a>) that points to a resource
     -->
-
+    <article class="card">
+      <h3>Understanding Semantic HTML</h3>
+      <p>A comprehensive guide to choosing the right HTML tags based on their meaning and purpose.</p>
+      <a href="https://www.smashingmagazine.com/2018/01/understanding-semantics-html5/" target="_blank" rel="noopener">Read More</a>
+    </article>
+    <article class="card">
+      <h3>HTML5 Semantic Elements</h3>
+      <p>Learn how to use semantic elements like header, nav, main, section, article, aside, and footer effectively.</p>
+      <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank" rel="noopener">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Accessibility in HTML</h3>
+      <p>Discover how semantic HTML improves accessibility for users with disabilities.</p>
+      <a href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener">Read More</a>
+    </article>
     <!-- STEP 12 — Aside + footer -->
     <!--
       Aside: add a short 'Link Best Practices' checklist in a <ul>.
       Footer: add a short note explaining why descriptive links help accessibility.
     -->
-
+    <aside>
+      <h2>Link Best Practices</h2>
+      <ul>
+        <li>Use descriptive link text.</li>
+        <li>Avoid using "click here".</li>
+        <li>Ensure links are accessible.</li>
+        <li>Use target="_blank" for external links.</li>
+        <li>Include rel="noopener" for security.</li>
+      </ul>
+    </aside>
+    <footer>
+      <p>Using descriptive link text improves accessibility by providing context to all users, including those using screen readers.</p>
+    </footer>
     <!-- STEP LAST — Checklist before you finish -->
     <!--
       ✅ Semantic tags used: header/nav/main/section/article/aside/footer
@@ -145,5 +218,6 @@
       ✅ iframe is embedded (YouTube or Maps) + has a title attribute
       ✅ Link text is descriptive (not 'click here')
     -->
+    </div>
   </body>
 </html>
