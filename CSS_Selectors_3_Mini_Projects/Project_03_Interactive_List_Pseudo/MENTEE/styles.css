@@ -26,7 +26,9 @@
   3. This spacing should make the text easier to read
      and increase the interactive area.
 */
-
+.items li {
+  padding: 10px;
+}
 /* ===============================
    STEP 2 — Hover Interaction (:hover)
    =============================== */
@@ -37,7 +39,9 @@
      the user’s mouse is over the item.
   3. This visually shows that the item is interactive.
 */
-
+.items li:hover {
+  background-color: lightgray;
+}
 /* ===============================
    STEP 3 — Focus Interaction (:focus)
    =============================== */
@@ -51,7 +55,9 @@
   4. NOTE: <li> elements must be focusable in HTML
      using tabindex="0".
 */
-
+.items li:focus {
+  outline: 2px solid blue;
+}                             
 /* ===============================
    STEP 4 — First Item Styling (:first-child)
    =============================== */
@@ -62,7 +68,9 @@
   2. Make this item visually stronger than the others.
   3. This is commonly used to highlight priority items.
 */
-
+.items li:first-child {
+  font-weight: bold;
+}
 /* ===============================
    STEP 5 — Last Item Styling (:last-child)
    =============================== */
@@ -74,7 +82,9 @@
      or less emphasized.
   3. This helps create visual hierarchy.
 */
-
+.items li:last-child {
+  color: gray;
+}
 /* ===============================
    STEP 6 — Targeting by Position (:nth-child)
    =============================== */
@@ -86,7 +96,9 @@
   3. Apply a subtle background color.
   4. Remember: counting starts at 1, not 0.
 */
-
+.items li:nth-child(2) {
+  background-color: lightblue;
+}
 /* ===============================
    STEP 7 — Adding Content Before (::before)
    =============================== */
@@ -99,7 +111,10 @@
   3. This content does NOT exist in the HTML.
   4. Set a color for the inserted content.
 */
-
+.items li::before {
+  content: "* ";
+  color: blueviolet;
+}
 /* ===============================
    STEP 8 — Adding Content After (::after)
    =============================== */
@@ -110,7 +125,10 @@
   2. The inserted content should be visually subtle.
   3. This is often used for icons or indicators.
 */
-
+.items li::after {
+  content: " ✓";
+  color: green;
+}
 /* ===============================
    STEP 9 — Styling the First Letter (::first-letter)
    =============================== */
@@ -121,7 +139,10 @@
   2. Increase the size of the first letter slightly.
   3. This creates a typographic emphasis effect.
 */
-
+.items li::first-letter {
+  font-size: 1.2em;
+  font-weight: bold;
+}
 /* ===============================
    STEP 10 — Styling the First Line (::first-line)
    =============================== */
@@ -133,7 +154,10 @@
   3. The first line depends on screen size
      and container width.
 */
-
+.items li::first-line {
+  font-weight: bold;
+  color: darkgreen;
+}
 /*
   ✅ After completing all steps:
   - Save the file

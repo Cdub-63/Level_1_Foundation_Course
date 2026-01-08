@@ -10,15 +10,22 @@
   Select all <a> tags inside .menu using a descendant selector.
   Change text color.
 */
-
+.menu a {
+  color: blue;
+}
 /* STEP 2 — Child combinator */
 /*
   Use > to select only direct li children of ul.
   Add padding to those li elements.
 */
-
+ul > li {
+  padding: 2px;
+}
 /* STEP 3 — Adjacent sibling */
 /*
   Use + to style the li immediately after the first one.
   Change background color.
 */
+li + li {
+  background-color: yellow;
+}
