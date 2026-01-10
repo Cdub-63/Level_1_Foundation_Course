@@ -19,6 +19,24 @@
   Style .page: max-width, center with margin: 0 auto, add padding.
   Add simple card-like styling for .demo sections so you can read clearly.
 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demo {
+  background-color: #f9f9f9;
+  border: 1px solid purple;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
@@ -28,6 +46,13 @@
   Add padding + border-radius + background so it looks like a pill.
   Notice: inline elements do NOT start on a new line.
 */
+
+.pill--inline {
+  display: inline;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: lightblue;
+}
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
@@ -39,6 +64,14 @@
   Notice: block elements take the full line.
 */
 
+.pill--block {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: lightgreen;
+  margin-top: 10px;
+}
+
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
 /* STEP 4 — display:none removes from layout */
@@ -46,6 +79,10 @@
   Select .banner and set display: none.
   Observe: the button moves up because the banner is removed from layout.
 */
+
+.banner {
+  display: none;
+}
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
@@ -55,5 +92,17 @@
   Select .grid .card and style them (background, padding, border, radius).
   This reinforces block layout and stacking.
 */
+
+.grid {
+  margin-top: 20px;
+}
+
+.grid .card {
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid purple;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
