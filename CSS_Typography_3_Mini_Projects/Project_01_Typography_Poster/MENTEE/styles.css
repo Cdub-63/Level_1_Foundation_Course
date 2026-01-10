@@ -28,6 +28,15 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /* STEP 2 — Poster container typography */
 /*
   Select .poster and set width (example: 520px) and padding.
@@ -36,6 +45,14 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+
+.poster {
+  width: 520px;
+  padding: 20px;
+  background-color: lightpink;
+  border-radius: 10px;
+  text-align: center;
+}
 
 /* STEP 3 — Headline hierarchy (font-size + weight) */
 /*
@@ -46,6 +63,11 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.headline {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
 /* STEP 4 — Tagline and subhead (style differences) */
 /*
   Select .tagline and make it smaller using font-size.
@@ -55,6 +77,13 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.tagline {
+  font-size: 1.5rem;
+}
+
+.subhead {
+  font-style: italic;
+}
 /* STEP 5 — Labels (weight + letter spacing) */
 /*
   Select .label and make it bold (font-weight).
@@ -63,3 +92,8 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.label {
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

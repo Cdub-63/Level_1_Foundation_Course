@@ -29,6 +29,17 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 /* STEP 2 — Text alignment */
 /*
   Select .article and set text-align: left (or try justify just to compare).
@@ -36,7 +47,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.article {
+    text-align: left;
+}
 /* STEP 3 — Line height (MOST IMPORTANT) */
 /*
   Select .para and set line-height (example: 1.6 to 1.8).
@@ -45,6 +58,9 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.para {
+    line-height: 1.6;
+}
 /* STEP 4 — Spacing (letter + word spacing) */
 /*
   Select .kicker and add letter-spacing (example: 0.06em).
@@ -54,6 +70,13 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.kicker {
+    letter-spacing: 0.06em;
+}
+
+.para {
+    word-spacing: 0.02em;
+}
 /* STEP 5 — Transform + decoration */
 /*
   Select .meta and set text-transform: uppercase to make it look like metadata.
@@ -62,3 +85,14 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.meta {
+    text-transform: uppercase;
+}
+
+.author {
+    text-decoration: underline;
+}
+
+.note {
+    text-transform: capitalize;
+}

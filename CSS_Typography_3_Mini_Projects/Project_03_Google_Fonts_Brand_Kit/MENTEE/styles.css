@@ -34,6 +34,24 @@
   After importing, test by setting font-family and seeing the font actually change.
 */
 
+
+
+.playfair-display-light {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
 /* STEP 2 — Base typography system */
@@ -47,6 +65,19 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
 /* STEP 3 — Headings use the DISPLAY font */
 /*
   Select .hero__title and set font-family to your DISPLAY font.
@@ -56,6 +87,12 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
 /* STEP 4 — Brand label styling */
 /*
   Select .brand and make it look like a logo label:
@@ -67,6 +104,12 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+.brand {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 /* STEP 5 — Button typography + decoration */
 /*
   Select .hero__btn and style it like a button.
@@ -75,3 +118,10 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+
+.hero_btn {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
