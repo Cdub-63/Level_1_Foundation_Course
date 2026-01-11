@@ -15,6 +15,11 @@
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: lightgrey;
+}
 /* STEP 2 — Center the card */
 /*
   Select .page.
@@ -23,7 +28,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* STEP 3 — Card background + spacing */
 /*
   Select .card.
@@ -33,7 +43,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
 /* STEP 4 — Text colors for hierarchy */
 /*
   Select .title and make it darker (color).
@@ -42,7 +57,13 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.title {
+  color: #333;
+}
 
+.subtitle {
+  color: rgba(0, 0, 0, 0.6);
+}
 /* STEP 5 — Badge colors (meaning) */
 /*
   All badges share: padding, border-radius, font-size, font-weight.
@@ -54,3 +75,29 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.badge--good {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.badge--warn {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.badge--bad {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}

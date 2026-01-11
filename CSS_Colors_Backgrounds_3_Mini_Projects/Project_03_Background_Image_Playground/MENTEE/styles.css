@@ -13,7 +13,15 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+.hero {
+  height: 70vh;
+  color: #ffffff;
+}
 /* STEP 2 — Add the background image */
 /*
   Select .hero and set:
@@ -25,7 +33,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.hero {
+  background-image: url('../../assets/hero-bg.svg');
+}
 /* STEP 3 — Control size, position, repeat */
 /*
   Add these properties on .hero:
@@ -36,7 +46,11 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* STEP 4 — Add a second background pattern (optional layer) */
 /*
   CSS can layer multiple backgrounds (first one is on top).
@@ -49,7 +63,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.hero {
+  background-image: url('../../assets/dots.svg'), url('../../assets/hero-bg.svg');
+  background-size: 260px 260px, cover;
+  background-repeat: repeat, no-repeat;
+  background-position: top left, center;
+}
 /* STEP 5 — Test background-attachment */
 /*
   Add background-attachment: fixed; to .hero.
@@ -59,3 +78,6 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.hero {
+  background-attachment: fixed;
+}
