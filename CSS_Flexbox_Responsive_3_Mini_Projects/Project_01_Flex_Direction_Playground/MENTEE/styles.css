@@ -14,7 +14,23 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+  margin: 0;
+  font-family: system-ui;
+}
 
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demo {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
 /* STEP 2 — Turn the container into a flexbox */
 /*
   Select .box and set display: flex.
@@ -23,6 +39,10 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.box {
+  display: flex;
+  gap: 10px;
+}
 
 /* STEP 3 — Control direction */
 /*
@@ -36,7 +56,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.box {
+  flex-direction: row;
+}
 /* STEP 4 — Optional: center items (preview for next project) */
 /*
   Try justify-content and align-items on .box.
@@ -44,3 +66,7 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.box {
+  justify-content: center;
+  align-items: center;
+}

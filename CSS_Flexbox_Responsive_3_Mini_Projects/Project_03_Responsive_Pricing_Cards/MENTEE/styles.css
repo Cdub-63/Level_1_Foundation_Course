@@ -13,7 +13,17 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 /* STEP 2 — Make the pricing container a flex row */
 /*
   Select .pricing and set display: flex.
@@ -22,7 +32,10 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.pricing {
+    display: flex;
+    gap: 20px;
+}
 /* STEP 3 — Turn on wrapping (THIS is the key) */
 /*
   Add flex-wrap: wrap to .pricing.
@@ -30,7 +43,11 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.pricing {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 /* STEP 4 — Make cards share space nicely */
 /*
   Select .plan and set a flexible sizing rule.
@@ -41,7 +58,15 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.plan {
+    flex: 1;
+    min-width: 240px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 /* STEP 5 — Alignments inside cards */
 /*
   Inside each card, you can use flex too (optional).
@@ -50,3 +75,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.plan {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
