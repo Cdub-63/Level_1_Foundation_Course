@@ -11,7 +11,19 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
 
+.page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 /* STEP 2 — Enable grid + define columns/rows */
 /*
   Select .board and set display: grid.
@@ -21,7 +33,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 110px;
+  gap: 10px;
+}
 /* STEP 3 — Style blocks so placement is obvious */
 /*
   Select .block and give it background, border, border-radius.
@@ -29,7 +46,16 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.block {
+  background-color: #4CAF50;
+  border: 2px solid #388E3C;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
 /* STEP 4 — Place/spans using grid-column */
 /*
   Select .block--a and make it span 2 columns.
@@ -38,7 +64,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.block--a {
+  grid-column: 1 / 3;
+}
 /* STEP 5 — Place/spans using grid-row (make D taller) */
 /*
   Select .block--d and make it span 2 rows.
@@ -46,7 +74,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.block--d {
+  grid-row: 2 / 4;
+}
 /* STEP 6 — Align items (inside the grid cells) */
 /*
   On .board, try justify-items and align-items.
@@ -55,7 +85,10 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.board {
+  justify-items: stretch;
+  align-items: stretch;
+}
 /* STEP 7 — Optional: align the whole grid area */
 /*
   If .board has a fixed height, you can align the grid tracks using:
@@ -64,3 +97,8 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.board {
+  height: 500px;
+  justify-content: center;
+  align-content: center;
+}

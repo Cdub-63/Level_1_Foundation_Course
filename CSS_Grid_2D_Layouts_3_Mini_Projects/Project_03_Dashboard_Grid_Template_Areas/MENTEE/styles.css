@@ -14,7 +14,43 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
 
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+}
+
+.main {
+  background-color: #f44336;
+  color: white;
+  padding: 20px;
+}
+
+.panel {
+  background-color: #ff9800;
+  color: white;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #555;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 /* STEP 2 — Enable grid on the layout container */
 /*
   Select .layout and set display: grid.
@@ -22,7 +58,10 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.layout {
+  display: grid;
+  min-height: 100vh;
+}
 /* STEP 3 — Define columns + rows for the dashboard */
 /*
   Create 3 columns: sidebar, main, panel.
@@ -32,7 +71,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 240px 1fr 320px;
+  grid-template-rows: auto 1fr auto;
+}
 /* STEP 4 — Use grid-template-areas (advanced) */
 /*
   Add grid-template-areas on .layout.
@@ -44,7 +88,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.layout {
+  grid-template-areas:
+    "header header header"
+    "sidebar main panel"
+    "footer footer footer";
+}
 /* STEP 5 — Assign each section to its area */
 /*
   Set grid-area for:
@@ -57,7 +106,25 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.header {
+  grid-area: header;
+}
 
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.panel {
+  grid-area: panel;
+}
+
+.footer {
+  grid-area: footer;
+}
 /* STEP 6 — Align items (bonus polish) */
 /*
   Try gap on .layout.
@@ -66,7 +133,11 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.layout {
+  gap: 10px;
+  align-items: stretch;
+  justify-items: stretch;
+}
 /* STEP 7 — Responsive switch (stack on mobile) */
 /*
   Add a media query (example: max-width: 800px).
@@ -80,3 +151,14 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "panel"
+      "sidebar"
+      "footer";
+  }
+}

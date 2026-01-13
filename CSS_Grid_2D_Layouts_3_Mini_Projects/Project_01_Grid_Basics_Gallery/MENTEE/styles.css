@@ -14,7 +14,17 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f0f0f0;
+}
 
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
 /* STEP 2 — Make the gallery a grid */
 /*
   Select .gallery.
@@ -23,7 +33,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.gallery {
+  display: grid;
+}
 /* STEP 3 — Define columns (grid-template-columns) */
 /*
   Still on .gallery, add grid-template-columns.
@@ -32,7 +44,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.gallery {
+  grid-template-columns: repeat(2, 1fr);
+}
 /* STEP 4 — Define rows (grid-template-rows) */
 /*
   Add grid-template-rows so rows have a consistent height.
@@ -41,7 +55,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.gallery {
+  grid-template-rows: 120px;
+}
 /* STEP 5 — Add spacing between tiles (gap) */
 /*
   Add gap on .gallery (example: 12px).
@@ -49,7 +65,9 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
-
+.gallery {
+  gap: 12px;
+}
 /* STEP 6 — Style the tiles (background + centering) */
 /*
   Select .tile and give it a background-color and border-radius.
@@ -57,3 +75,12 @@
 */
 
 /* ✅ WRITE YOUR CSS UNDER THIS LINE */
+.title {
+  background-color: #4a90e2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2em;
+}
