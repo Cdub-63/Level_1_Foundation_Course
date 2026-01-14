@@ -24,7 +24,10 @@ RULES:
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let maxCount = 5;
+let total = 0;
+console.log("maxCount:", maxCount);
+console.log("total:", total);
 /* -----------------------------------------
    STEP 2 — for loop (count up)
    -----------------------------------------
@@ -38,7 +41,11 @@ RULES:
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+for (let currentNumber = 1; currentNumber <= maxCount; currentNumber++) {
+   console.log("FOR count:", currentNumber);
+   total = total + currentNumber;
+}
+console.log("FOR total:", total);
 /* -----------------------------------------
    STEP 3 — while loop (count down)
    -----------------------------------------
@@ -52,7 +59,12 @@ RULES:
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let countdown = 3;
+while (countdown > 0) {
+   console.log("WHILE countdown:", countdown);
+   countdown = countdown - 1;
+}
+console.log("WHILE finished!");
 /* -----------------------------------------
    STEP 4 — do...while loop (runs at least once)
    -----------------------------------------
@@ -68,7 +80,13 @@ RULES:
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
-
+let tries = 0;
+const limit = 2;
+do {
+   console.log("DO...WHILE try:", tries);
+   tries = tries + 1;
+} while (tries < limit);
+console.log("DO...WHILE done:", tries);
 /* -----------------------------------------
    STEP 5 — Mini challenge (prove you understand)
    -----------------------------------------
@@ -79,3 +97,8 @@ RULES:
 */
 
 // ✅ WRITE YOUR CODE UNDER THIS LINE
+for (let num = 1; num <= 10; num++) {
+   if (num % 2 === 0) {
+      console.log("Even number:", num);
+   }
+}
